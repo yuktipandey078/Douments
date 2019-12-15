@@ -1,0 +1,46 @@
+Learning Document of Git--
+
+//Git commands
+
+
+1) git init                              --> to initialise a git repository.
+2) git add <filename>                    --> to add a file to git.
+3) git add .                             --> to add all files present in current working directory.
+4) git status                            --> to show the changes that has not been committed.
+5) git log                               --> to show all the commits made in current working directory.
+6) git checkout <filename>               --> to discard changes in working directory.
+7) git restore <filename>                --> to discard changes in working directory.
+8) git commit -m "msg"                   --> to send the files to staging enviroment with a msg.
+9) git rm <filename>                     --> to delete the file locally in working directory which can be restored using git restore command.It also informs the staging
+                                             enviroment about this deletion,so automatically doing git add for this deletion.
+10)git reset HEAD <filename>             --> to unstage the changes add by git add.
+11)git add --all                         --> to add every local change be it either insertion/deletion to staging enviroment.
+12)git checkout <commit-id>              --> to move HEAD to this commit.
+13)git branch                            --> to see what all branches are there. (* at the left indicate the branch in which we are currently in.)
+14)git checkout <branchname>             --> to switch to that branch.
+15)git branch <new-branch>               --> to create a new branch.
+16)git branch <new-branch> <commit-id>   --> to create a new branch with a content which was present in file with commitId=<commit-id>.
+17)git clone <clone-url>                 --> to clone/download a remote repository.
+18)git branch -a                         --> to see all braches whose information git has.
+19)git checkout -b <b1> <origin/b1>      --> to switch to branch b1 of remote repository .
+20)git clone --mirror <url> .git         --> to clone in such a way that all branches can be cloned.
+21)git config --bool core.bare false     --> to convert a bare repo (which has nothing but invisible git folder) into a normal repo.
+22)git reset --hard                      --> it will reset all what is present in current folder and create all brnaches.
+
+
+
+
+
+
+
+//Notes
+1) How to close commit editor ?
+ans>On Windows GIT Bash Ctrl+X would do nothing and found out it works quite like vi/vim. Press i to enter inline insert mode.
+    Type the description at the very top, press esc to exit insert mode, then type :x! (now the cursor is at the bottom) and hit enter to save and exit
+
+2) In git every commit has a hash called commit id which can be used to  see each version of your commit.
+3) Master is the main branch of Git.(By Default)
+4) Usually when we clone a project using git clone command , though git gets the information about all the branches but all branches are not cloned so to clone all branches
+   we should use git clone --mirror command followed by "git config --bool core.bare false" command followed by git reset --hard command.
+
+
